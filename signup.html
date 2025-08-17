@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dating Place - Sign Up</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class ="date">Dating Place</h1>
+      <p class="site-desc">Are you seeking for girlfriend or boyfriend? This is the right place for you.</p>
+    </header>
+    <form id="signupForm" class="card">
+      <h2>Sign Up</h2>
+      <p><marquee>
+      Don't worry with your details, it will be safe with us, only your nickname will be displayed in public.
+    </marquee> </p>
+      
+      <input type="text" id="firstName" placeholder="First Name" required>
+      <input type="text" id="surname" placeholder="Surname" required>
+      <input type="text" id="nickname" placeholder="Nickname" required>
+      <select id="gender" required>
+        <option value="" disabled selected>Gender</option>
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+      </select>
+      <select id="age" required>
+        <option value="" disabled selected>Age</option>
+        <script>
+          for(let i=16;i<=46;i++)document.write(`<option value="${i}">${i}</option>`);
+        </script>
+      </select>
+      <input type="tel" id="signupPhone" placeholder="Mobile Number" required>
+      <input type="password" id="signupPassword" placeholder="Password" required>
+      <label class="pic-label">Profile Picture (optional)
+        <input type="file" id="profilePic" accept="image/*">
+      </label>
+      <button type="submit">Sign Up</button>
+      <p>Already have an account? <a href="index.html">Sign In</a></p>
+      <div id="signupError" class="error"></div>
+    </form>
+    <a class="contact-link" href="mailto:manthalukelvin@gmail.com?subject=Contact%20Support%20-%20D-Journal">Contact us</a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

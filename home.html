@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dating Place - Friends</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <span class="menu-icon" id="menuBtn">&#9776;</span>
+    
+      <span class="nav-title" >Dating Place</span>
+    
+  </nav>
+
+  
+  <div class="container">
+    <header>
+      <h1 class ="date">Dating Place</h1>
+      <p class="site-desc">Search the type of person you want using the Gender and age properties.</p>
+    </header>
+    <div class="toggle-section">
+      <button id="friendsBtn" class="toggle-btn active">Friends</button>
+      <button id="messagesBtn" class="toggle-btn" onclick="window.location.href='messages.html'">Messages</button>
+    </div>
+    <!-- Friends Panel -->
+    <div id="friendsPanel" class="card">
+      <h2>Your Friends</h2>
+      <div id="friendsList" class="results"></div>
+      
+      <div id="findFriendsPanel" class="card hidden">
+        <h3>Find Friends</h3>
+        <select id="searchGender">
+          <option value="" disabled selected>Gender</option>
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+        </select>
+        <select id="searchAge">
+          <option value="" disabled selected>Age</option>
+          <script>
+            for(let i=16;i<=46;i++)document.write(`<option value="${i}">${i}</option>`);
+          </script>
+        </select>
+        <button id="searchBtn">Search</button>
+        <div id="results" class="results"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Hamburger Menu -->
+  <div id="sideMenu" class="side-menu">
+    <button id="homeBtn">🏠 Home</button>
+    <button id="settingsBtn">⚙️ Settings</button>
+    <button id="logoutBtn">🚪 Logout</button>
+  </div>
+  <!-- Message Popup -->
+  <div id="messagePopup" class="popup hidden">
+    <div class="popup-content">
+      <span id="closeMsgBtn" class="close">&times;</span>
+      <h3>Messages with <span id="msgUser"></span></h3>
+      <div id="msgHistory" class="msg-history"></div>
+      <form id="msgForm">
+        <input type="text" id="msgInput" placeholder="Type a message..." required>
+        <button type="submit">Send</button>
+      </form>
+      <button id="deleteChatBtn" class="delete-chat-btn">Delete Chat</button>
+    </div>
+  </div>
+   
+  <a class="contact-link" href="mailto:manthalukelvin@gmail.com?subject=Contact%20Support%20-%20D-Journal">Contact us</a>
+  <script src="script.js"></script>
+</body>
+</html>

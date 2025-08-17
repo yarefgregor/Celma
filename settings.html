@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dating Place - Settings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <span class="menu-icon" id="menuBtn">&#9776;</span>
+    <span class="nav-title">Settings</span>
+  </nav>
+  <div class="container">
+    <header>
+      <h1>Dating Place</h1>
+      <p class="site-desc">Are you seeking for girlfriend or boyfriend? This is the right place for you.</p>
+    </header>
+    <form id="settingsForm" class="card">
+      <h2>Your Settings</h2>
+      <input type="text" id="settingsFirstName" placeholder="First Name" required>
+      <input type="text" id="settingsSurname" placeholder="Surname" required>
+      <input type="text" id="settingsNickname" placeholder="Nickname" required>
+      <select id="settingsGender" required>
+        <option value="" disabled selected>Gender</option>
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+      </select>
+      <select id="settingsAge" required>
+        <option value="" disabled selected>Age</option>
+        <script>
+          for(let i=16;i<=46;i++)document.write(`<option value="${i}">${i}</option>`);
+        </script>
+      </select>
+      <input type="tel" id="settingsPhone" placeholder="Mobile Number" required disabled>
+      <input type="password" id="settingsPassword" placeholder="Password" required>
+      <label class="pic-label">Profile Picture
+        <input type="file" id="settingsProfilePic" accept="image/*">
+      </label>
+      <img id="settingsProfilePicPreview" class="pic-preview" src="" alt="Profile Pic" style="display:none;">
+      <button type="submit">Save Changes</button>
+      <div id="settingsMsg" class="success"></div>
+    </form>
+  </div>
+  <div id="sideMenu" class="side-menu">
+    <button id="homeBtn">🏠 Home</button>
+    <button id="settingsBtn">⚙️ Settings</button>
+    <button id="logoutBtn">🚪 Logout</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
